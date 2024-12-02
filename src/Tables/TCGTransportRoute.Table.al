@@ -9,7 +9,6 @@ table 50180 "TCG Transport Route"
         field(1; TransportRouteId; Code[20])
         {
             Caption = 'Transport Route ID';
-            DataClassification = CustomerContent;
             ToolTip = 'Specifies the Transport Route Id', Comment = '%1';
 
             trigger OnValidate()
@@ -24,11 +23,9 @@ table 50180 "TCG Transport Route"
         field(2; Description; Text[100])
         {
             Caption = 'Description';
-            DataClassification = CustomerContent;
             ToolTip = 'Specifies the description of Transport Route', Comment = '%!';
         }
     }
-
     keys
     {
         key(PK; TransportRouteId)
