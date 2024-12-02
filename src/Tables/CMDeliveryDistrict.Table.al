@@ -1,4 +1,4 @@
-table 50182 DeliveryDistrict
+table 50182 "CM Delivery District"
 {
     DataClassification = CustomerContent;
     Caption = 'Delivery District';

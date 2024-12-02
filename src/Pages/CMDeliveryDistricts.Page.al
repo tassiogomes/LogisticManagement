@@ -1,9 +1,9 @@
-page 50181 DeliveryDistricts
+page 50181 "CM Delivery Districts"
 {
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
-    SourceTable = DeliveryDistrict;
+    SourceTable = "CM Delivery District";
     Editable = false;
     Caption = 'Delivery Districts';
 

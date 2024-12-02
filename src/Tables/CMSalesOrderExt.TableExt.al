@@ -1,4 +1,4 @@
-tableextension 50180 SalesOrderExtension extends "Sales Header"
+tableextension 50180 "CM Sales Order Ext" extends "Sales Header"
 {
     fields
     {
@@ -19,6 +19,5 @@ tableextension 50180 SalesOrderExtension extends "Sales Header"
         // Add changes to field groups here
     }
 
-    var
-        myInt: Integer;
+
 }

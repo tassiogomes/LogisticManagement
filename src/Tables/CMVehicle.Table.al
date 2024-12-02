@@ -1,4 +1,4 @@
-table 50181 Vehicle
+table 50181 "CM Vehicle"
 {
     DataClassification = CustomerContent;
 
@@ -47,8 +47,6 @@ table 50181 Vehicle
         // Add changes to field groups here
     }
 
-    var
-        myInt: Integer;
 
     trigger OnInsert()
     begin
