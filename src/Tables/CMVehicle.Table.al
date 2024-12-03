@@ -15,6 +15,18 @@ table 50181 "CM Vehicle"
             DataClassification = CustomerContent;
             Editable = false;
             Caption = 'Vehicle Code';
+
+            trigger OnValidate()
+            var
+                Vehicle: Record "CM Vehicle";
+            begin
+                if "Code" < xRec."Code" then
+                    if not Vehicle.Get(Rec."Code") then begin
+                        SalesSetup.Get();
+                        NoSeries.TestManual(SalesSetup."Code");
+                        "No. Series" := '';
+                    end;
+            end;
         }
         field(3; LicenseNumber; Code[30])
         {
@@ -31,6 +43,12 @@ table 50181 "CM Vehicle"
             DataClassification = CustomerContent;
             Caption = 'Vehicle Description';
             ToolTip = 'Vehicle Description';
+        }
+        field(6; "No. Series"; Code[20])
+        {
+            Caption = 'No. Series';
+            Editable = false;
+            TableRelation = "No. Series";
         }
     }
 
@@ -67,5 +85,9 @@ table 50181 "CM Vehicle"
     begin
 
     end;
+
+    var
+        SalesSetup: Record "Sales & Receivables Setup";
+        NoSeries: Codeunit "No. Series";
 
 }

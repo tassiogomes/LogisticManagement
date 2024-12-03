@@ -1,19 +1,15 @@
-page 50181 "CM Delivery Districts"
+page 50182 "CM Delivery District Card"
 {
-    PageType = List;
+    PageType = Card;
     ApplicationArea = All;
-    UsageCategory = Lists;
+    UsageCategory = Administration;
     SourceTable = "CM Delivery District";
-    Editable = false;
-    Caption = 'Delivery Districts';
-    CardPageId = "CM Delivery District Card";
-
 
     layout
     {
         area(Content)
         {
-            repeater(General)
+            group(GroupName)
             {
 
                 field("Code"; Rec."Code")
@@ -26,10 +22,21 @@ page 50181 "CM Delivery Districts"
                 }
             }
         }
-        area(Factboxes)
-        {
-
-        }
     }
+
+    // actions
+    // {
+    //     area(Processing)
+    //     {
+    //         action(ActionName)
+    //         {
+
+    //             trigger OnAction()
+    //             begin
+
+    //             end;
+    //         }
+    //     }
+    // }
 
 }
